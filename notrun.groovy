@@ -14,14 +14,14 @@ jobs.each { j ->
 
   numbuilds = j.builds.size()
   if (numbuilds == 0) {
-    println 'JOB: ' + j.name
+    println 'JOB: ' + j.fullName
     println '  -> no build'
     return
   }
 
   lastbuild = j.builds[numbuilds - 1]
   if (lastbuild.timestamp.getTime() < sometimeago) {
-    println 'JOB: ' + j.name
+    println 'JOB: ' + j.fullName
     println '  -> lastbuild: ' + lastbuild.displayName + ' = ' + lastbuild.result + ', time: ' + lastbuild.timestampString2
   }
 }

@@ -3,7 +3,7 @@
 jobs = Jenkins.instance.getAllItems()
 jobs.each { j ->
   if (j instanceof com.cloudbees.hudson.plugins.folder.Folder) { return }
-  println 'JOB: ' + j.name
+  println 'JOB: ' + j.fullName
   numbuilds = j.builds.size()
   if (numbuilds == 0) {
     println '  -> no build'

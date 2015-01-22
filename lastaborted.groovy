@@ -8,7 +8,7 @@ jobs.each { j ->
   if (numbuilds == 0) { return }
   lastbuild = j.builds[numbuilds - 1]
   if (lastbuild.result == Result.ABORTED) {
-    println 'JOB: ' + j.name
+    println 'JOB: ' + j.fullName
     abortCause = lastbuild.getAction(InterruptedBuildAction).getCauses()[0]
     println '  -> lastbuild: ' + lastbuild.displayName + ' = ' + lastbuild.result + ', cause: ' + abortCause.shortDescription + ', time: ' + lastbuild.timestampString2
   }
