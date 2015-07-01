@@ -1,3 +1,6 @@
+// Licensed under MIT
+// author : Damien Nozay
+
 // scan all jobs and check if the last build was aborted (e.g. maintenance)
 // and output user / timestamp
  

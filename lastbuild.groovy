@@ -1,3 +1,6 @@
+// Licensed under MIT
+// author : Damien Nozay
+
 // list jobs and their last build.
 
 jobs = Jenkins.instance.getAllItems()

@@ -1,3 +1,6 @@
+// Licensed under MIT
+// author : Damien Nozay
+
 // list jobs not run in the last N days / last N months
 
 import groovy.time.TimeCategory

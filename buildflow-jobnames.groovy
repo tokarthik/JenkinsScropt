@@ -1,3 +1,6 @@
+// Licensed under MIT
+// author : Damien Nozay
+
 // for all builds from build-flow-plugin whose parameters include a GIT_BRANCH paramater,
 // change the displayName to include branch and build number
  
