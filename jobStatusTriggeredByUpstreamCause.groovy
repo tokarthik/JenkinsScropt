@@ -28,8 +28,8 @@ def printInformationOfDownstreamJobs(jobName, buildnumber, viewName){
   jobsByCause.each{ d_build->
    // def d_build = job.lastBuild
     println("Build: ${d_build.lastBuild.fullDisplayName}->"+
-     "result:${d_build.lastBuild.result}->${d_build.lastBuild.buildStatusSummary.message}, " +
-     "(was triggered by:${d_build.lastBuild.getCause(hudson.model.Cause.UpstreamCause).upstreamRun})" )
+     "result: ${d_build.lastBuild.result}->${d_build.lastBuild.buildStatusSummary.message}, " +
+     "(was triggered by: ${d_build.lastBuild.getCause(hudson.model.Cause.UpstreamCause).upstreamRun})" )
   }
 }
 
