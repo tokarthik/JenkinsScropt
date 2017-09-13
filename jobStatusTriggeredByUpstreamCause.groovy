@@ -11,8 +11,9 @@ import hudson.model.*
 
 def printInformationOfDownstreamJobs(jobName, buildnumber, viewName){
   def upStreamBuild = Jenkins.getInstance().getItemByFullName(jobName).getBuildByNumber(buildnumber)
-  println "${upStreamBuild.fullDisplayName}" +
-   "${upStreamBuild.getCause(hudson.model.Cause.UpstreamCause).upstreamRun}"
+   println "${upStreamBuild.fullDisplayName} " +
+   "${upStreamBuild.getCause(hudson.model.Cause.UpstreamCause).upstreamRun} " +
+    "Triggerd at: ${upStreamBuild.getTime()}"
   def cause_pattern = /.*${jobName}.*${buildnumber}.*/
   println "Cause pattern: ${cause_pattern}"
   def view = Hudson.instance.getView(viewName)
